@@ -4,6 +4,16 @@ import streamlit as st
 from streamlit_folium import st_folium
 import modules.lamppost_feature as lpf
 
+st.markdown("""
+### Lamp Post Query (Singapore Only)
+Query for all way ids, starting from a lamp post (number), that is on X road to the node where X road intersect Y road.
+- Lamp post number
+- Road name that lamp post is on
+- Road name (X road)
+- Condition Road (Y road)
+<br>
+""", unsafe_allow_html=True)
+
 lamp_post = st.text_input('Enter the lamp post number')
 lamp_post_road = st.text_input('Enter the road name of the lamp post')
 searchFor = st.text_input('Enter the road name to search for')
