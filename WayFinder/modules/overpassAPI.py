@@ -4,7 +4,7 @@ import requests
 
 def overpass_query(query) -> json:
     """
-    Function to execute Overpass API query
+    Function to execute an Overpass API query
     
     Params:
         query: str - Overpass query to be executed
@@ -34,7 +34,7 @@ def overpass_query(query) -> json:
 
 def query_selector(type, road, searchArea="Singapore", bbox="", around=50) -> str:
     """
-    Function to generate Overpass API query based on type
+    Function to select Overpass API query based on type
     
     Params:
         type: str - Type of query to be executed

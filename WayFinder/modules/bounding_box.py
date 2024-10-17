@@ -99,7 +99,6 @@ def shrink_or_expand_percentage(bbox, percentage, shrink=True):
     percent_change_lng = lng_diff * (percentage / 100)
     
     if shrink == True:
-        print("shrink")
         new_min_lat = str(min_lat + percent_change_lat)
         new_min_lng = str(min_lng + percent_change_lng)
         new_max_lat = str(max_lat - percent_change_lat)
