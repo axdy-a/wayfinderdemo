@@ -18,6 +18,8 @@ searchArea = st.selectbox("Choose a country:", options)
 start_btn = st.button('Start Query')
 
 if start_btn:
+    if searchArea == "Vietnam":
+        searchArea = "Việt Nam"
     result = bwt.between_query(searchFor, [condition1, condition2], searchArea)
     result = ",".join(result)
     st.write(result)

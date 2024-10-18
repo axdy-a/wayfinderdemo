@@ -18,5 +18,7 @@ searchArea = st.selectbox("Choose a country:", options)
 start_btn = st.button('Start Query')
     
 if start_btn:
+    if searchArea == "Vietnam":
+        searchArea = "Việt Nam"
     result = sf.single_road_query(searchFor, searchArea)
     st.text_area(label="Way IDs",value=result, height=500)
