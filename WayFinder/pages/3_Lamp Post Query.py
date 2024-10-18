@@ -18,7 +18,8 @@ lamp_post = st.text_input('Enter the lamp post number')
 lamp_post_road = st.text_input('Enter the road name of the lamp post')
 searchFor = st.text_input('Enter the road name to search for')
 condition1 = st.text_input('Enter the condition road')
-searchArea = st.text_input('Enter the search area', value="Singapore")
+options = ["Singapore", "Malaysia", "Indonesia", "Cambodia", "Myanmar", "Philippines", "Thailand", "Vietnam"]
+searchArea = st.selectbox("Choose a country:", options)
 
 start_btn = st.button('Start Query')
 

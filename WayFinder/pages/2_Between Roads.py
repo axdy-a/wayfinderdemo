@@ -13,7 +13,8 @@ Query for all way ids belonging to X road, between Y road and Z road.
 searchFor = st.text_input('Enter the Road Name')
 condition1 = st.text_input('Enter the first condition road')
 condition2  = st.text_input('Enter the second condition road')
-searchArea = st.text_input('Enter the search area', value="Singapore")
+options = ["Singapore", "Malaysia", "Indonesia", "Cambodia", "Myanmar", "Philippines", "Thailand", "Vietnam"]
+searchArea = st.selectbox("Choose a country:", options)
 start_btn = st.button('Start Query')
 
 if start_btn:

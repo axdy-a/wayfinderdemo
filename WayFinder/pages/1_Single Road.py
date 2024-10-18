@@ -11,7 +11,10 @@ Query for all way ids belonging to a specific road.
 
 
 searchFor = st.text_input('Enter the Road Name')
-searchArea = st.text_input('Enter the search area', value="Singapore")
+
+options = ["Singapore", "Malaysia", "Indonesia", "Cambodia", "Myanmar", "Philippines", "Thailand", "Vietnam"]
+searchArea = st.selectbox("Choose a country:", options)
+
 start_btn = st.button('Start Query')
     
 if start_btn:
