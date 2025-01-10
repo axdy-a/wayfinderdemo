@@ -61,7 +61,8 @@ def generate_test_method(data):
         
         expected = data[3]
         expected.sort()
-
+        print(output)
+        print(expected)
         self.assertEqual(output, expected)
     return test_method
 
