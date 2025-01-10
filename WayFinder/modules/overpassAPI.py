@@ -71,7 +71,22 @@ def query_selector(type, road, searchArea="Singapore", bbox="", around=50) -> st
                 f"node(around:{around},{bbox});\n"
                 f"way(bn)[highway][name=\"{road}\"];\n"
                 f"out body;")
+        
     
+    return overpass_query
+
+
+
+
+def ukm_length_query(wayids) -> str:
+    
+    overpass_query = (
+            f"[out:json];\n"
+            f"way(id:{wayids});\n"
+            f"out geom;\n"
+            f"make stats length=sum(length());\n"
+            f"out;"
+        )
     
     return overpass_query
 
